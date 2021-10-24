@@ -244,7 +244,19 @@ Setelah itu terdapat subdomain `mecha.franky.yyy.com` dengan alias `www.mecha.fr
   ![06-07](https://user-images.githubusercontent.com/31863229/138610119-68f7a6ec-87a2-49ca-b6bc-615d3380a52d.PNG)
 
 ## Soal 7
+Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Franky dengan nama `general.mecha.frank.yyy.com` dengan alias `www.general.mecha.franky.yyy.com` yang mengarah ke Skypie.
 
+### Jawaban
+**Pada Water7**
+- Edit file `/etc/bind/sunnygo/mecha.franky.B09.com` seperti pada gambar berikut:
+
+  ![07-01](https://user-images.githubusercontent.com/31863229/138610375-671877c7-1fac-48be-ae53-e183062fde0b.PNG)
+- Restart bind9.
+
+**Pada Loguetown**
+- Lakukan ping domain `general.mecha.franky.B09.com`.
+
+  ![07-02](https://user-images.githubusercontent.com/31863229/138610376-36e4f097-cddd-4a9a-a5ad-222803544258.PNG)
 
 ## Soal 8
 
