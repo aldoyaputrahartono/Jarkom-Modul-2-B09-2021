@@ -107,7 +107,7 @@ Luffy ingin menghubungi Franky yang berada di `EniesLobby` dengan denden mushi. 
   ```
   mkdir /etc/bind/kaizoku
   ```
-- Copykan file `db.local` pada path `/etc/bind` ke dalam folder `kaizoku` yang baru saja dibuat dan ubah namanya menjadi franky.B09.com.
+- Copykan file `db.local` pada path `/etc/bind` ke dalam folder `kaizoku` yang baru saja dibuat dan ubah namanya menjadi `franky.B09.com`.
 
   ```
   cp /etc/bind/db.local /etc/bind/kaizoku/franky.B09.com
@@ -145,7 +145,27 @@ Setelah itu buat subdomain `super.franky.yyy.com` dengan alias `www.super.franky
   ![03-02](https://user-images.githubusercontent.com/31863229/138607616-7a3e2c4f-a9fa-46e1-8869-b06c06439484.PNG)
 
 ## Soal 4
+Buat juga reverse domain untuk domain utama.
 
+### Jawaban
+**Pada EniesLobby**
+- Edit file `/etc/bind/named.conf.local` seperti pada gambar berikut:
+
+  ![04-01](https://user-images.githubusercontent.com/31863229/138608215-9c81c5c6-841d-4ee6-ac97-c9aeac83c857.PNG)
+- Copykan file `db.local` pada path `/etc/bind` ke dalam folder `kaizoku` yang baru saja dibuat dan ubah namanya menjadi `2.181.192.in-addr.arpa`.
+
+  ```
+  cp /etc/bind/db.local /etc/bind/kaizoku/2.181.192.in-addr.arpa
+  ```
+- Edit file `/etc/bind/kaizoku/2.181.192.in-addr.arpa` seperti pada gambar berikut:
+
+  ![04-02](https://user-images.githubusercontent.com/31863229/138608218-aad67a21-2e26-4515-8d30-0dbcc785486b.PNG)
+- Restart bind9.
+
+**Pada Loguetown**
+- Lakukan pengecekan konfigurasi dengan perintah `host -t PTR 192.181.2.2`.
+
+  ![04-03](https://user-images.githubusercontent.com/31863229/138608220-e9af715c-628e-45c3-b9df-8dd90118ab26.PNG)
 
 ## Soal 5
 
