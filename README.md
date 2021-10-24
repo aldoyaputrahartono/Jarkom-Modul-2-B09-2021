@@ -11,7 +11,7 @@ Repositori Praktikum Jarkom Modul 2
 ## Soal 1
 EniesLobby akan dijadikan sebagai DNS Master, Water7 akan dijadikan DNS Slave, dan Skypie akan digunakan sebagai Web Server. Terdapat 2 Client yaitu Loguetown, dan Alabasta. Semua node terhubung pada router Foosha, sehingga dapat mengakses internet.
 
-**Jawaban**
+### Jawaban
 
 Membuat topologi sebagai berikut:
 
@@ -89,7 +89,45 @@ Restart semua node dan coba `ping google.com`. Berikut bukti `Loguetown` dapat m
 ![01-02](https://user-images.githubusercontent.com/31863229/138602128-fdeaf005-5b76-4cbf-b324-8701cba646af.PNG)
 
 ## Soal 2
+Luffy ingin menghubungi Franky yang berada di `EniesLobby` dengan denden mushi. Kalian diminta Luffy untuk membuat website utama dengan mengakses `franky.yyy.com` dengan alias `www.franky.yyy.com` pada folder kaizoku.
 
+### Jawaban
+
+**Pada EniesLobby**
+- Install aplikasi bind9.
+
+  ```
+  apt-get install bind9 -y
+  ```
+- Edit file `/etc/bind/named.conf.local` seperti pada gambar berikut:
+
+  ![02-01](https://user-images.githubusercontent.com/31863229/138604972-862e5f21-579f-497b-88d8-a89c397ccc23.PNG)
+- Buat folder `kaizoku` di dalam `/etc/bind`.
+
+  ```
+  mkdir /etc/bind/kaizoku
+  ```
+- Copykan file `db.local` pada path `/etc/bind` ke dalam folder `kaizoku` yang baru saja dibuat dan ubah namanya menjadi franky.B09.com.
+
+  ```
+  cp /etc/bind/db.local /etc/bind/kaizoku/franky.B09.com
+  ```
+- Edit file `/etc/bind/kaizoku/franky.B09.com` seperti pada gambar berikut:
+
+  ![02-02](https://user-images.githubusercontent.com/31863229/138604974-f22d570b-8983-4057-b538-99a0b1eae771.PNG)
+- Restart bind9.
+
+  ```
+  service bind9 restart
+  ```
+
+**Pada Loguetown**
+- Edit file `/etc/resolv.conf` seperti pada gambar berikut:
+
+  ![02-03](https://user-images.githubusercontent.com/31863229/138604976-c91c2357-e94c-4f4c-bd8e-9688a03cbd93.PNG)
+- Lakukan ping domain `franky.B09.com` dan `www.franky.B09.com`.
+
+  ![02-04](https://user-images.githubusercontent.com/31863229/138604968-bf89f8dc-6855-4aec-a54f-d51bd2aa9aa8.PNG)
 
 ## Soal 3
 
