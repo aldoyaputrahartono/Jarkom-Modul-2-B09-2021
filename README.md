@@ -339,6 +339,7 @@ Setelah melakukan konfigurasi server, maka dilakukan konfigurasi Webserver. Pert
 
 ## Kendala
 1. Kesulitan untuk memberikan alias pada subdomain pada soal 3 dan 7.
+2. Sedikit kesulitan pada pengerjaan soal Web Server karena aplikasi lynx tidak dapat menampilkan gambar.
 
 ## Pembagian Tugas
 |Nama                   |Soal   |
