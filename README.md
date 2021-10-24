@@ -259,7 +259,56 @@ Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Fr
   ![07-02](https://user-images.githubusercontent.com/31863229/138610376-36e4f097-cddd-4a9a-a5ad-222803544258.PNG)
 
 ## Soal 8
+Setelah melakukan konfigurasi server, maka dilakukan konfigurasi Webserver. Pertama dengan webserver `www.franky.yyy.com`. Pertama, luffy membutuhkan webserver dengan DocumentRoot pada `/var/www/franky.yyy.com`.
 
+### Jawaban
+**Pada Skypie**
+- Install aplikasi apache, PHP, dan libapache2-mod-php7.0.
+
+  ```
+  apt-get install apache2 -y
+  apt-get install php -y
+  apt-get install libapache2-mod-php7.0 -y
+  ```
+- Pindah ke directory `/etc/apache2/sites-available`.
+- Copy file `000-default.conf` menjadi file `franky.B09.com.conf`.
+- Edit file `franky.B09.com.conf` seperti pada gambar berikut:
+
+  ![08-01](https://user-images.githubusercontent.com/31863229/138613006-f2481e4f-c1c5-4fd9-96c2-3fbc4b3ec9f1.PNG)
+- Aktifkan konfigurasi franky.B09.com.
+
+  ```
+  a2ensite franky.B09.com
+  ```
+- Restart apache.
+
+  ```
+  service apache2 restart
+  ```
+- Pindah ke directory `/var/www`.
+- Download file zip menggunakan `wget`.
+
+  ```
+  wget https://github.com/FeinardSlim/Praktikum-Modul-2-Jarkom/raw/main/franky.zip
+  ```
+- Lakukan unzip.
+
+  ```
+  unzip franky.zip
+  ```
+- Rename folder `franky` menjadi `franky.B09.com` dan terdapat isi file seperti pada gambar berikut:
+
+  ![08-02](https://user-images.githubusercontent.com/31863229/138613003-0bf147e7-68cd-460d-a82d-1d12cdd02581.PNG)
+
+**Pada Loguetown**
+- Install aplikasi lynx.
+
+  ```
+  apt-get install lynx -y
+  ```
+- Buka `www.franky.B09.com` menggunakan lynx.
+
+  ![08-03](https://user-images.githubusercontent.com/31863229/138613005-39722a4d-d33f-4579-a8d9-be9b2c2e29ca.PNG)
 
 ## Soal 9
 
