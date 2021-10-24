@@ -130,7 +130,19 @@ Luffy ingin menghubungi Franky yang berada di `EniesLobby` dengan denden mushi. 
   ![02-04](https://user-images.githubusercontent.com/31863229/138604968-bf89f8dc-6855-4aec-a54f-d51bd2aa9aa8.PNG)
 
 ## Soal 3
+Setelah itu buat subdomain `super.franky.yyy.com` dengan alias `www.super.franky.yyy.com` yang diatur DNS nya di EniesLobby dan mengarah ke Skypie.
 
+### Jawaban
+**Pada EniesLobby**
+- Edit file `/etc/bind/kaizoku/franky.B09.com` seperti pada gambar berikut:
+
+  ![03-01](https://user-images.githubusercontent.com/31863229/138607683-fc9a0ab3-0f2d-495a-95a4-190a4406d690.PNG)
+- Restart bind9.
+
+**Pada Loguetown**
+- Lakukan ping domain `super.franky.B09.com`.
+
+  ![03-02](https://user-images.githubusercontent.com/31863229/138607616-7a3e2c4f-a9fa-46e1-8869-b06c06439484.PNG)
 
 ## Soal 4
 
