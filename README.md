@@ -289,7 +289,7 @@ Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Fr
 
 
 ## Kendala
-1. kendala
+1. Kesulitan untuk memberikan alias pada subdomain pada soal 3 dan 7.
 
 ## Pembagian Tugas
 |Nama                   |Soal   |
