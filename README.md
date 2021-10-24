@@ -168,7 +168,37 @@ Buat juga reverse domain untuk domain utama.
   ![04-03](https://user-images.githubusercontent.com/31863229/138608220-e9af715c-628e-45c3-b9df-8dd90118ab26.PNG)
 
 ## Soal 5
+Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Water7 sebagai DNS Slave untuk domain utama.
 
+### Jawaban
+**Pada EniesLobby**
+- Edit file `/etc/bind/named.conf.local` seperti pada gambar berikut:
+
+  ![05-01](https://user-images.githubusercontent.com/31863229/138608897-e941962a-ae1c-4ad9-9bf9-661c8a66e0e0.PNG)
+- Restart bind9.
+
+**Pada Water7**
+- Install aplikasi bind9.
+
+  ```
+  apt-get install bind9 -y
+  ```
+- Edit file `/etc/bind/named.conf.local` seperti pada gambar berikut:
+
+  ![05-02](https://user-images.githubusercontent.com/31863229/138608898-a4c81747-c995-48aa-85c9-8568fc688b21.PNG)
+- Restart bind9.
+
+**Pada Loguetown**
+- Pada `Enieslobby` silahkan matikan service bind9.
+  ```
+  service bind9 stop
+  ```
+- Edit file `/etc/resolv.conf` seperti pada gambar berikut:
+
+  ![05-03](https://user-images.githubusercontent.com/31863229/138608902-ba9806a8-549e-48c7-993d-ae9310eee1ab.PNG)
+- Lakukan ping domain `franky.B09.com`.
+
+  ![05-04](https://user-images.githubusercontent.com/31863229/138608904-4f897143-9edb-4dbe-a7cf-bd6ff15136f3.PNG)
 
 ## Soal 6
 
