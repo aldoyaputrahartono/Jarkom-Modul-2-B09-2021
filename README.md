@@ -6,7 +6,7 @@ Repositori Praktikum Jarkom Modul 2
 |:------------:|:---------------------:|
 |05111940000084|Aldo Yaputra Hartono   |
 |05111940000092|Maximilian H M Lingga  |
-|nrp|nama|
+|05111840000023|Izzulhaq Fawwaz Syauqiy|
 
 ## Soal 1
 
