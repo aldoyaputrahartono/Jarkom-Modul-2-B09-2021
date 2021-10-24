@@ -5,7 +5,7 @@ Repositori Praktikum Jarkom Modul 2
 |NRP           |Nama                   |
 |:------------:|:---------------------:|
 |05111940000084|Aldo Yaputra Hartono   |
-|nrp|nama|
+|05111940000092|Maximilian H M Lingga  |
 |nrp|nama|
 
 ## Soal 1
