@@ -201,7 +201,47 @@ Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Wat
   ![05-04](https://user-images.githubusercontent.com/31863229/138608904-4f897143-9edb-4dbe-a7cf-bd6ff15136f3.PNG)
 
 ## Soal 6
+Setelah itu terdapat subdomain `mecha.franky.yyy.com` dengan alias `www.mecha.franky.yyy.com` yang didelegasikan dari EniesLobby ke Water7 dengan IP menuju ke Skypie dalam folder sunnygo.
 
+### Jawaban
+**Pada EniesLobby**
+- Edit file `/etc/bind/kaizoku/franky.B09.com` seperti pada gambar berikut:
+
+  ![06-01](https://user-images.githubusercontent.com/31863229/138610108-06d654ab-72af-4542-84ca-d11191b4addf.PNG)
+- Edit file `/etc/bind/named.conf.options` seperti pada gambar berikut:
+
+  ![06-02](https://user-images.githubusercontent.com/31863229/138610112-b124ab94-3095-434c-ae01-60a57421e6a6.PNG)
+- Edit file `/etc/bind/named.conf.local` seperti pada gambar berikut:
+
+  ![06-03](https://user-images.githubusercontent.com/31863229/138610113-ca288dab-be46-4c48-a19c-a17fcde19478.PNG)
+- Restart bind9.
+
+**Pada Water7**
+- Edit file `/etc/bind/named.conf.options` seperti pada gambar berikut:
+
+  ![06-04](https://user-images.githubusercontent.com/31863229/138610114-8ee223f2-c04b-4b03-b809-4093ad35d3a3.PNG)
+- Edit file `/etc/bind/named.conf.local` seperti pada gambar berikut:
+
+  ![06-05](https://user-images.githubusercontent.com/31863229/138610115-7fff082c-e675-4b64-bcfd-8ec4d1e16379.PNG)
+- Buat folder `sunnygo` di dalam `/etc/bind`.
+
+  ```
+  mkdir /etc/bind/sunnygo
+  ```
+- Copykan file `db.local` pada path `/etc/bind` ke dalam folder `sunnygo` yang baru saja dibuat dan ubah namanya menjadi `mecha.franky.B09.com`.
+
+  ```
+  cp /etc/bind/db.local /etc/bind/sunnygo/mecha.franky.B09.com
+  ```
+- Edit file `/etc/bind/sunnygo/mecha.franky.B09.com` seperti pada gambar berikut:
+
+  ![06-06](https://user-images.githubusercontent.com/31863229/138610118-db206c8e-fa3e-48a9-b985-c00fb991f75f.PNG)
+- Restart bind9.
+
+**Pada Loguetown**
+- Lakukan ping domain `mecha.franky.B09.com` dan `www.mecha.franky.B09.com`.
+
+  ![06-07](https://user-images.githubusercontent.com/31863229/138610119-68f7a6ec-87a2-49ca-b6bc-615d3380a52d.PNG)
 
 ## Soal 7
 
