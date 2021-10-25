@@ -484,7 +484,32 @@ Dan Luffy meminta untuk web `www.general.mecha.franky.yyy.com` hanya bisa diakse
   ![14-07](https://user-images.githubusercontent.com/31863229/138662647-d8726d77-37e9-4059-b57b-5907dccd2f92.PNG)
 
 ## Soal 15
+Dengan authentikasi username `luffy` dan password `onepiece` dan file di `/var/www/general.mecha.franky.yyy`.
 
+### Jawaban
+**Pada Skypie**
+- Pindah ke directory `/etc/apache2/sites-available`.
+- Edit file `general.mecha.franky.B09.com.conf` seperti pada gambar berikut:
+
+  ![15-01](https://user-images.githubusercontent.com/31863229/138665511-c995a6bb-88c3-4d15-99de-91cc18c79e8b.PNG)
+  ![15-02](https://user-images.githubusercontent.com/31863229/138665524-77d3d34d-ca27-43af-913a-4646f5cd5020.PNG)
+- Jalankan perintah berikut untuk membuat akun autentikasi baru dengan username `luffy`. Kita akan diminta untuk memasukkan password baru dan confirm password tersebut diisi `onepiece`.
+
+  ```
+  htpasswd -c /etc/apache2/.htpasswd luffy
+  ```
+- Restart apache.
+
+  ```
+  service apache2 restart
+  ```
+
+**Pada Loguetown**
+- Buka `general.mecha.franky.B09.com:15000` menggunakan lynx.
+
+  ![15-03](https://user-images.githubusercontent.com/31863229/138665528-85ea4f7c-2b62-4f83-9e70-bfc165c2df44.PNG)
+  ![15-04](https://user-images.githubusercontent.com/31863229/138665530-6ae720ac-15c8-472c-9f10-d55f3cb3f080.PNG)
+  ![15-05](https://user-images.githubusercontent.com/31863229/138665534-db4cce14-77ae-4d97-b297-14c06a19dbc7.PNG)
 
 ## Soal 16
 
