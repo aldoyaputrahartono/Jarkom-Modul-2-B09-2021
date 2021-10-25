@@ -244,7 +244,7 @@ Setelah itu terdapat subdomain `mecha.franky.yyy.com` dengan alias `www.mecha.fr
   ![06-07](https://user-images.githubusercontent.com/31863229/138610119-68f7a6ec-87a2-49ca-b6bc-615d3380a52d.PNG)
 
 ## Soal 7
-Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Franky dengan nama `general.mecha.frank.yyy.com` dengan alias `www.general.mecha.franky.yyy.com` yang mengarah ke Skypie.
+Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Water7 dengan nama `general.mecha.franky.yyy.com` dengan alias `www.general.mecha.franky.yyy.com` yang mengarah ke Skypie.
 
 ### Jawaban
 **Pada Water7**
@@ -311,7 +311,24 @@ Setelah melakukan konfigurasi server, maka dilakukan konfigurasi Webserver. Pert
   ![08-03](https://user-images.githubusercontent.com/31863229/138613005-39722a4d-d33f-4579-a8d9-be9b2c2e29ca.PNG)
 
 ## Soal 9
+Setelah itu, Luffy juga membutuhkan agar url `www.franky.yyy.com/index.php/home` dapat menjadi menjadi `www.franky.yyy.com/home`.
 
+### Jawaban
+**Pada Skypie**
+- Pindah ke directory `/etc/apache2/sites-available`.
+- Edit file `franky.B09.com.conf` seperti pada gambar berikut:
+
+  ![09-01](https://user-images.githubusercontent.com/31863229/138647864-b9012e2d-8002-41cf-965d-b6b19d113b4a.PNG)
+- Restart apache.
+
+  ```
+  service apache2 restart
+  ```
+
+**Pada Loguetown**
+- Buka `www.franky.B09.com/home` menggunakan lynx.
+
+  ![09-02](https://user-images.githubusercontent.com/31863229/138647857-59c7e0ac-4a6c-496d-93de-a0176037f41b.PNG)
 
 ## Soal 10
 
