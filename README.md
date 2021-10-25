@@ -139,6 +139,10 @@ Setelah itu buat subdomain `super.franky.yyy.com` dengan alias `www.super.franky
   ![03-01](https://user-images.githubusercontent.com/31863229/138607683-fc9a0ab3-0f2d-495a-95a4-190a4406d690.PNG)
 - Restart bind9.
 
+  ```
+  service bind9 restart
+  ```
+
 **Pada Loguetown**
 - Lakukan ping domain `super.franky.B09.com`.
 
@@ -162,6 +166,10 @@ Buat juga reverse domain untuk domain utama.
   ![04-02](https://user-images.githubusercontent.com/31863229/138608218-aad67a21-2e26-4515-8d30-0dbcc785486b.PNG)
 - Restart bind9.
 
+  ```
+  service bind9 restart
+  ```
+
 **Pada Loguetown**
 - Lakukan pengecekan konfigurasi dengan perintah `host -t PTR 192.181.2.2`.
 
@@ -177,6 +185,10 @@ Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Wat
   ![05-01](https://user-images.githubusercontent.com/31863229/138608897-e941962a-ae1c-4ad9-9bf9-661c8a66e0e0.PNG)
 - Restart bind9.
 
+  ```
+  service bind9 restart
+  ```
+
 **Pada Water7**
 - Install aplikasi bind9.
 
@@ -187,6 +199,10 @@ Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Wat
 
   ![05-02](https://user-images.githubusercontent.com/31863229/138608898-a4c81747-c995-48aa-85c9-8568fc688b21.PNG)
 - Restart bind9.
+
+  ```
+  service bind9 restart
+  ```
 
 **Pada Loguetown**
 - Pada `Enieslobby` silahkan matikan service bind9.
@@ -216,6 +232,10 @@ Setelah itu terdapat subdomain `mecha.franky.yyy.com` dengan alias `www.mecha.fr
   ![06-03](https://user-images.githubusercontent.com/31863229/138610113-ca288dab-be46-4c48-a19c-a17fcde19478.PNG)
 - Restart bind9.
 
+  ```
+  service bind9 restart
+  ```
+
 **Pada Water7**
 - Edit file `/etc/bind/named.conf.options` seperti pada gambar berikut:
 
@@ -238,6 +258,10 @@ Setelah itu terdapat subdomain `mecha.franky.yyy.com` dengan alias `www.mecha.fr
   ![06-06](https://user-images.githubusercontent.com/31863229/138610118-db206c8e-fa3e-48a9-b985-c00fb991f75f.PNG)
 - Restart bind9.
 
+  ```
+  service bind9 restart
+  ```
+
 **Pada Loguetown**
 - Lakukan ping domain `mecha.franky.B09.com` dan `www.mecha.franky.B09.com`.
 
@@ -252,6 +276,10 @@ Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Wa
 
   ![07-01](https://user-images.githubusercontent.com/31863229/138610375-671877c7-1fac-48be-ae53-e183062fde0b.PNG)
 - Restart bind9.
+
+  ```
+  service bind9 restart
+  ```
 
 **Pada Loguetown**
 - Lakukan ping domain `general.mecha.franky.B09.com`.
@@ -386,10 +414,10 @@ Akan tetapi, pada folder `/public`, Luffy ingin hanya dapat melakukan directory 
   ```
 
 **Pada Loguetown**
-- Buka `super.franky.B09.com` menggunakan lynx.
+- Buka `super.franky.B09.com/public` menggunakan lynx.
 
-  ![11-02](https://user-images.githubusercontent.com/31863229/138651172-3a21aab5-5699-42f9-9871-46bbad9514b5.PNG)
-- Buka `super.franky.B09.com/public/css`, `super.franky.B09.com/public/images`, `super.franky.B09.com/public/js` menggunakan lynx.
+  ![11-02](https://user-images.githubusercontent.com/31863229/138694312-8e9505f9-e4b9-43b2-9525-896a9b6cbe68.PNG)
+- Buka `super.franky.B09.com/public/css`, `super.franky.B09.com/public/images`, dan `super.franky.B09.com/public/js` menggunakan lynx.
 
   ![11-03](https://user-images.githubusercontent.com/31863229/138651176-a247c424-a618-48aa-8c03-3461a808d9e3.PNG)
 
