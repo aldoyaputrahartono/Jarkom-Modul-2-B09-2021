@@ -414,7 +414,24 @@ Tidak hanya itu, Luffy juga menyiapkan error file `404.html` pada folder `/error
   ![12-02](https://user-images.githubusercontent.com/31863229/138652187-10cdf3a5-14f6-4ab7-a1f9-c13ba4e520e5.PNG)
 
 ## Soal 13
+Luffy juga meminta Nami untuk dibuatkan konfigurasi virtual host. Virtual host ini bertujuan untuk dapat mengakses file asset `www.super.franky.yyy.com/public/js` menjadi `www.super.franky.yyy.com/js`.
 
+### Jawaban
+**Pada Skypie**
+- Pindah ke directory `/etc/apache2/sites-available`.
+- Edit file `super.franky.B09.com.conf` seperti pada gambar berikut:
+
+  ![13-01](https://user-images.githubusercontent.com/31863229/138653250-28b03028-f476-4f28-b91e-e7da9691a080.PNG)
+- Restart apache.
+
+  ```
+  service apache2 restart
+  ```
+
+**Pada Loguetown**
+- Buka `super.franky.B09.com/js` menggunakan lynx.
+
+  ![13-02](https://user-images.githubusercontent.com/31863229/138653260-2543aacb-8623-4fc4-8790-71ca479d3061.PNG)
 
 ## Soal 14
 
