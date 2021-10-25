@@ -371,7 +371,27 @@ Setelah itu, pada subdomain `www.super.franky.yyy.com`, Luffy membutuhkan penyim
   ![10-03](https://user-images.githubusercontent.com/31863229/138649483-5120d387-c212-4fdf-b09c-9ad5f7fac4b3.PNG)
 
 ## Soal 11
+Akan tetapi, pada folder `/public`, Luffy ingin hanya dapat melakukan directory listing saja.
 
+### Jawaban
+**Pada Skypie**
+- Pindah ke directory `/etc/apache2/sites-available`.
+- Edit file `super.franky.B09.com.conf` seperti pada gambar berikut:
+
+  ![11-01](https://user-images.githubusercontent.com/31863229/138650989-ce3f44f6-20af-40d7-bf1e-c90483ee7029.PNG)
+- Restart apache.
+
+  ```
+  service apache2 restart
+  ```
+
+**Pada Loguetown**
+- Buka `super.franky.B09.com` menggunakan lynx.
+
+  ![11-02](https://user-images.githubusercontent.com/31863229/138651172-3a21aab5-5699-42f9-9871-46bbad9514b5.PNG)
+- Buka `super.franky.B09.com/public/css`, `super.franky.B09.com/public/images`, `super.franky.B09.com/public/js` menggunakan lynx.
+
+  ![11-03](https://user-images.githubusercontent.com/31863229/138651176-a247c424-a618-48aa-8c03-3461a808d9e3.PNG)
 
 ## Soal 12
 
