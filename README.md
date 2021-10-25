@@ -512,7 +512,24 @@ Dengan authentikasi username `luffy` dan password `onepiece` dan file di `/var/w
   ![15-05](https://user-images.githubusercontent.com/31863229/138665534-db4cce14-77ae-4d97-b297-14c06a19dbc7.PNG)
 
 ## Soal 16
+Dan setiap kali mengakses IP Skypie akan diahlikan secara otomatis ke `www.franky.yyy.com`.
 
+### Jawaban
+**Pada Skypie**
+- Pindah ke directory `/etc/apache2/sites-available`.
+- Edit file `000-default.conf` seperti pada gambar berikut:
+
+  ![16-01](https://user-images.githubusercontent.com/31863229/138668608-5cbdd2ce-6804-4239-adec-4579bed6db13.PNG)
+- Restart apache.
+
+  ```
+  service apache2 restart
+  ```
+
+**Pada Loguetown**
+- Buka `192.181.2.4` (IP Skypie) menggunakan lynx.
+
+  ![16-02](https://user-images.githubusercontent.com/31863229/138668611-6fe34a91-9581-46c2-8a53-6f7e05155cf9.PNG)
 
 ## Soal 17
 
