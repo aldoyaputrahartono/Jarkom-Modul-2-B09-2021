@@ -532,11 +532,39 @@ Dan setiap kali mengakses IP Skypie akan diahlikan secara otomatis ke `www.frank
   ![16-02](https://user-images.githubusercontent.com/31863229/138668611-6fe34a91-9581-46c2-8a53-6f7e05155cf9.PNG)
 
 ## Soal 17
+Dikarenakan Franky juga ingin mengajak temannya untuk dapat menghubunginya melalui website `www.super.franky.yyy.com`, dan dikarenakan pengunjung web server pasti akan bingung dengan randomnya images yang ada, maka Franky juga meminta untuk mengganti request gambar yang memiliki substring `franky` akan diarahkan menuju `franky.png`.
 
+### Jawaban
+**Pada Skypie**
+- Jalankan perintah `a2enmod rewrite` untuk mengaktifkan module rewrite.
+- Restart apache dengan perintah `service apache2 restart`.
+- Tambahkan file baru `.htaccess` pada folder `/var/www/super.franky.B09.com`, di mana file tersebut akan dimodifikasi menjadi:
+
+  ![17-01](https://user-images.githubusercontent.com/31863229/138675514-f6ac8976-a897-483c-91ec-694c0ab376f1.PNG)
+- Pindah ke directory `/etc/apache2/sites-available`.
+- Edit file `super.franky.B09.com.conf` agar file `.htaccess` dapat berjalan seperti pada gambar berikut:
+
+  ![17-02](https://user-images.githubusercontent.com/31863229/138675524-9fab5fb6-3991-4654-8beb-5ae8ac2d4623.PNG)
+- Restart apache.
+
+  ```
+  service apache2 restart
+  ```
+
+**Pada Loguetown**
+- Buka `super.franky.B09.com/public/images/franky.png` menggunakan lynx.
+
+  ![17-03](https://user-images.githubusercontent.com/31863229/138675528-40995ec7-560a-4d9e-b2b9-b05ee3b3f64d.PNG)
+- Buka `super.franky.B09.com/public/images/eyeoffranky.jpg` menggunakan lynx.
+
+  ![17-04](https://user-images.githubusercontent.com/31863229/138675531-b28c94e8-656f-46d4-a759-28ba179577a5.PNG)
+- Buka `super.franky.B09.com/public/images/background-frank.jpg` menggunakan lynx.
+
+  ![17-05](https://user-images.githubusercontent.com/31863229/138675533-1e50bd51-09ed-4d6c-9ec8-d15651521052.PNG)
 
 ## Kendala
 1. Kesulitan untuk memberikan alias pada subdomain pada soal 3 dan 7.
-2. Sedikit kesulitan pada pengerjaan soal Web Server karena aplikasi lynx tidak dapat menampilkan gambar.
+2. Sedikit kesulitan pada pengerjaan soal Web Server karena aplikasi lynx tidak dapat menampilkan gambar pada soal 17.
 
 ## Pembagian Tugas
 |Nama                   |Soal   |
