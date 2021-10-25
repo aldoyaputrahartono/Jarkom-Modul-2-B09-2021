@@ -331,7 +331,44 @@ Setelah itu, Luffy juga membutuhkan agar url `www.franky.yyy.com/index.php/home`
   ![09-02](https://user-images.githubusercontent.com/31863229/138647857-59c7e0ac-4a6c-496d-93de-a0176037f41b.PNG)
 
 ## Soal 10
+Setelah itu, pada subdomain `www.super.franky.yyy.com`, Luffy membutuhkan penyimpanan aset yang memiliki DocumentRoot pada `/var/www/super.franky.yyy.com`.
 
+### Jawaban
+**Pada Skypie**
+- Pindah ke directory `/etc/apache2/sites-available`.
+- Copy file `000-default.conf` menjadi file `super.franky.B09.com.conf`.
+- Edit file `super.franky.B09.com.conf` seperti pada gambar berikut:
+
+  ![10-01](https://user-images.githubusercontent.com/31863229/138649466-0ade542c-3d0f-4779-9be7-3d011a519d03.PNG)
+- Aktifkan konfigurasi super.franky.B09.com.
+
+  ```
+  a2ensite super.franky.B09.com
+  ```
+- Restart apache.
+
+  ```
+  service apache2 restart
+  ```
+- Pindah ke directory `/var/www`.
+- Download file zip menggunakan `wget`.
+
+  ```
+  wget https://github.com/FeinardSlim/Praktikum-Modul-2-Jarkom/raw/main/super.franky.zip
+  ```
+- Lakukan unzip.
+
+  ```
+  unzip super.franky.zip
+  ```
+- Rename folder `super.franky` menjadi `super.franky.B09.com` dan terdapat isi file seperti pada gambar berikut:
+
+  ![10-02](https://user-images.githubusercontent.com/31863229/138649479-746c84b9-960b-4d48-808e-cf1724964842.PNG)
+
+**Pada Loguetown**
+- Buka `super.franky.B09.com` menggunakan lynx.
+
+  ![10-03](https://user-images.githubusercontent.com/31863229/138649483-5120d387-c212-4fdf-b09c-9ad5f7fac4b3.PNG)
 
 ## Soal 11
 
