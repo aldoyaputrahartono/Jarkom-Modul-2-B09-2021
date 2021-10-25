@@ -434,7 +434,54 @@ Luffy juga meminta Nami untuk dibuatkan konfigurasi virtual host. Virtual host i
   ![13-02](https://user-images.githubusercontent.com/31863229/138653260-2543aacb-8623-4fc4-8790-71ca479d3061.PNG)
 
 ## Soal 14
+Dan Luffy meminta untuk web `www.general.mecha.franky.yyy.com` hanya bisa diakses dengan port 15000 dan port 15500.
 
+### Jawaban
+**Pada Skypie**
+- Pindah ke directory `/etc/apache2/sites-available`.
+- Copy file `000-default.conf` menjadi file `general.mecha.franky.B09.com.conf`.
+- Edit file `general.mecha.franky.B09.com.conf` seperti pada gambar berikut:
+
+  ![14-01](https://user-images.githubusercontent.com/31863229/138662605-7d4a055c-4755-4b79-8e7d-0c71bc13f151.PNG)
+  ![14-02](https://user-images.githubusercontent.com/31863229/138662623-e0b7649c-e02d-4774-88b7-a91ab14387be.PNG)
+- Edit file `/etc/apache2/ports.conf` untuk mengaktifkan port 15000 dan port 15500 seperti pada gambar berikut:
+
+  ![14-03](https://user-images.githubusercontent.com/31863229/138662627-16ddbfb7-56c2-4f8d-9dce-2092d8cccbd3.PNG)
+- Aktifkan konfigurasi general.mecha.franky.B09.com.
+
+  ```
+  a2ensite general.mecha.franky.B09.com
+  ```
+- Restart apache.
+
+  ```
+  service apache2 restart
+  ```
+- Pindah ke directory `/var/www`.
+- Download file zip menggunakan `wget`.
+
+  ```
+  wget https://github.com/FeinardSlim/Praktikum-Modul-2-Jarkom/raw/main/general.mecha.franky.zip
+  ```
+- Lakukan unzip.
+
+  ```
+  unzip general.mecha.franky.zip
+  ```
+- Rename folder `general.mecha.franky` menjadi `general.mecha.franky.B09.com` dan terdapat isi file seperti pada gambar berikut:
+
+  ![14-04](https://user-images.githubusercontent.com/31863229/138662631-42197d6c-557d-44e8-a569-be9a59c4abd8.PNG)
+
+**Pada Loguetown**
+- Buka `general.mecha.franky.B09.com` menggunakan lynx.
+
+  ![14-05](https://user-images.githubusercontent.com/31863229/138662635-4721d99a-0698-46f6-ad73-29b1dcc08a3e.PNG)
+- Buka `general.mecha.franky.B09.com:15000` menggunakan lynx.
+
+  ![14-06](https://user-images.githubusercontent.com/31863229/138662644-484252fc-8cc6-42c4-9977-8f52d1700ae4.PNG)
+- Buka `general.mecha.franky.B09.com:15500` menggunakan lynx.
+
+  ![14-07](https://user-images.githubusercontent.com/31863229/138662647-d8726d77-37e9-4059-b57b-5907dccd2f92.PNG)
 
 ## Soal 15
 
