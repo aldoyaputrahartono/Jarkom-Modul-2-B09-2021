@@ -394,7 +394,24 @@ Akan tetapi, pada folder `/public`, Luffy ingin hanya dapat melakukan directory 
   ![11-03](https://user-images.githubusercontent.com/31863229/138651176-a247c424-a618-48aa-8c03-3461a808d9e3.PNG)
 
 ## Soal 12
+Tidak hanya itu, Luffy juga menyiapkan error file `404.html` pada folder `/error` untuk mengganti error kode pada apache.
 
+### Jawaban
+**Pada Skypie**
+- Pindah ke directory `/etc/apache2/sites-available`.
+- Edit file `super.franky.B09.com.conf` seperti pada gambar berikut:
+
+  ![12-01](https://user-images.githubusercontent.com/31863229/138652177-bcaeb9ad-090e-4ae2-ac0f-06fe93ebcf1e.PNG)
+- Restart apache.
+
+  ```
+  service apache2 restart
+  ```
+
+**Pada Loguetown**
+- Buka `super.franky.B09.com/publoc` (terdapat typo) menggunakan lynx.
+
+  ![12-02](https://user-images.githubusercontent.com/31863229/138652187-10cdf3a5-14f6-4ab7-a1f9-c13ba4e520e5.PNG)
 
 ## Soal 13
 
