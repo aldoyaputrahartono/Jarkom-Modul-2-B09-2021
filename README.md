@@ -136,7 +136,7 @@ Setelah itu buat subdomain `super.franky.yyy.com` dengan alias `www.super.franky
 **Pada EniesLobby**
 - Edit file `/etc/bind/kaizoku/franky.B09.com` seperti pada gambar berikut:
 
-  ![03-01](https://user-images.githubusercontent.com/31863229/138607683-fc9a0ab3-0f2d-495a-95a4-190a4406d690.PNG)
+  ![03-01](https://user-images.githubusercontent.com/31863229/138877763-578dbcc3-0da9-4f7c-a5eb-f9e16f70a017.PNG)
 - Restart bind9.
 
   ```
@@ -144,9 +144,9 @@ Setelah itu buat subdomain `super.franky.yyy.com` dengan alias `www.super.franky
   ```
 
 **Pada Loguetown**
-- Lakukan ping domain `super.franky.B09.com`.
+- Lakukan ping domain `super.franky.B09.com` dan `www.super.franky.B09.com`.
 
-  ![03-02](https://user-images.githubusercontent.com/31863229/138607616-7a3e2c4f-a9fa-46e1-8869-b06c06439484.PNG)
+  ![03-02](https://user-images.githubusercontent.com/31863229/138876207-01bbe761-be2c-444c-b8fd-2c619a6c79ea.PNG)
 
 ## Soal 4
 Buat juga reverse domain untuk domain utama.
@@ -223,7 +223,7 @@ Setelah itu terdapat subdomain `mecha.franky.yyy.com` dengan alias `www.mecha.fr
 **Pada EniesLobby**
 - Edit file `/etc/bind/kaizoku/franky.B09.com` seperti pada gambar berikut:
 
-  ![06-01](https://user-images.githubusercontent.com/31863229/138610108-06d654ab-72af-4542-84ca-d11191b4addf.PNG)
+  ![06-01](https://user-images.githubusercontent.com/31863229/138877770-9fbf39f5-44d8-4fc0-aaa1-dd866d427520.PNG)
 - Edit file `/etc/bind/named.conf.options` seperti pada gambar berikut:
 
   ![06-02](https://user-images.githubusercontent.com/31863229/138610112-b124ab94-3095-434c-ae01-60a57421e6a6.PNG)
@@ -274,7 +274,7 @@ Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Wa
 **Pada Water7**
 - Edit file `/etc/bind/sunnygo/mecha.franky.B09.com` seperti pada gambar berikut:
 
-  ![07-01](https://user-images.githubusercontent.com/31863229/138610375-671877c7-1fac-48be-ae53-e183062fde0b.PNG)
+  ![07-01](https://user-images.githubusercontent.com/31863229/138877211-1ec807bd-4a9f-4704-a23c-88264f34f51f.PNG)
 - Restart bind9.
 
   ```
@@ -282,9 +282,9 @@ Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Wa
   ```
 
 **Pada Loguetown**
-- Lakukan ping domain `general.mecha.franky.B09.com`.
+- Lakukan ping domain `general.mecha.franky.B09.com` dan `www.general.mecha.franky.B09.com`.
 
-  ![07-02](https://user-images.githubusercontent.com/31863229/138610376-36e4f097-cddd-4a9a-a5ad-222803544258.PNG)
+  ![07-02](https://user-images.githubusercontent.com/31863229/138877235-460dafea-b343-497f-b038-67c002a8b675.PNG)
 
 ## Soal 8
 Setelah melakukan konfigurasi server, maka dilakukan konfigurasi Webserver. Pertama dengan webserver `www.franky.yyy.com`. Pertama, luffy membutuhkan webserver dengan DocumentRoot pada `/var/www/franky.yyy.com`.
@@ -394,7 +394,7 @@ Setelah itu, pada subdomain `www.super.franky.yyy.com`, Luffy membutuhkan penyim
   ![10-02](https://user-images.githubusercontent.com/31863229/138649479-746c84b9-960b-4d48-808e-cf1724964842.PNG)
 
 **Pada Loguetown**
-- Buka `super.franky.B09.com` menggunakan lynx.
+- Buka `www.super.franky.B09.com` menggunakan lynx.
 
   ![10-03](https://user-images.githubusercontent.com/31863229/138649483-5120d387-c212-4fdf-b09c-9ad5f7fac4b3.PNG)
 
@@ -414,10 +414,10 @@ Akan tetapi, pada folder `/public`, Luffy ingin hanya dapat melakukan directory 
   ```
 
 **Pada Loguetown**
-- Buka `super.franky.B09.com/public` menggunakan lynx.
+- Buka `www.super.franky.B09.com/public` menggunakan lynx.
 
   ![11-02](https://user-images.githubusercontent.com/31863229/138694312-8e9505f9-e4b9-43b2-9525-896a9b6cbe68.PNG)
-- Buka `super.franky.B09.com/public/css`, `super.franky.B09.com/public/images`, dan `super.franky.B09.com/public/js` menggunakan lynx.
+- Buka `www.super.franky.B09.com/public/css`, `www.super.franky.B09.com/public/images`, dan `www.super.franky.B09.com/public/js` menggunakan lynx.
 
   ![11-03](https://user-images.githubusercontent.com/31863229/138651176-a247c424-a618-48aa-8c03-3461a808d9e3.PNG)
 
@@ -437,7 +437,7 @@ Tidak hanya itu, Luffy juga menyiapkan error file `404.html` pada folder `/error
   ```
 
 **Pada Loguetown**
-- Buka `super.franky.B09.com/publoc` (terdapat typo) menggunakan lynx.
+- Buka `www.super.franky.B09.com/publoc` (terdapat typo) menggunakan lynx.
 
   ![12-02](https://user-images.githubusercontent.com/31863229/138652187-10cdf3a5-14f6-4ab7-a1f9-c13ba4e520e5.PNG)
 
@@ -457,7 +457,7 @@ Luffy juga meminta Nami untuk dibuatkan konfigurasi virtual host. Virtual host i
   ```
 
 **Pada Loguetown**
-- Buka `super.franky.B09.com/js` menggunakan lynx.
+- Buka `www.super.franky.B09.com/js` menggunakan lynx.
 
   ![13-02](https://user-images.githubusercontent.com/31863229/138653260-2543aacb-8623-4fc4-8790-71ca479d3061.PNG)
 
@@ -470,11 +470,10 @@ Dan Luffy meminta untuk web `www.general.mecha.franky.yyy.com` hanya bisa diakse
 - Copy file `000-default.conf` menjadi file `general.mecha.franky.B09.com.conf`.
 - Edit file `general.mecha.franky.B09.com.conf` seperti pada gambar berikut:
 
-  ![14-01](https://user-images.githubusercontent.com/31863229/138662605-7d4a055c-4755-4b79-8e7d-0c71bc13f151.PNG)
-  ![14-02](https://user-images.githubusercontent.com/31863229/138662623-e0b7649c-e02d-4774-88b7-a91ab14387be.PNG)
+  ![14-01](https://user-images.githubusercontent.com/31863229/138880599-c5626403-4692-42d0-92e9-097722038014.PNG)
 - Edit file `/etc/apache2/ports.conf` untuk mengaktifkan port 15000 dan port 15500 seperti pada gambar berikut:
 
-  ![14-03](https://user-images.githubusercontent.com/31863229/138662627-16ddbfb7-56c2-4f8d-9dce-2092d8cccbd3.PNG)
+  ![14-02](https://user-images.githubusercontent.com/31863229/138662627-16ddbfb7-56c2-4f8d-9dce-2092d8cccbd3.PNG)
 - Aktifkan konfigurasi general.mecha.franky.B09.com.
 
   ```
@@ -498,18 +497,18 @@ Dan Luffy meminta untuk web `www.general.mecha.franky.yyy.com` hanya bisa diakse
   ```
 - Rename folder `general.mecha.franky` menjadi `general.mecha.franky.B09.com` dan terdapat isi file seperti pada gambar berikut:
 
-  ![14-04](https://user-images.githubusercontent.com/31863229/138662631-42197d6c-557d-44e8-a569-be9a59c4abd8.PNG)
+  ![14-03](https://user-images.githubusercontent.com/31863229/138662631-42197d6c-557d-44e8-a569-be9a59c4abd8.PNG)
 
 **Pada Loguetown**
-- Buka `general.mecha.franky.B09.com` menggunakan lynx.
+- Buka `www.general.mecha.franky.B09.com` menggunakan lynx.
 
-  ![14-05](https://user-images.githubusercontent.com/31863229/138662635-4721d99a-0698-46f6-ad73-29b1dcc08a3e.PNG)
-- Buka `general.mecha.franky.B09.com:15000` menggunakan lynx.
+  ![14-04](https://user-images.githubusercontent.com/31863229/138662635-4721d99a-0698-46f6-ad73-29b1dcc08a3e.PNG)
+- Buka `www.general.mecha.franky.B09.com:15000` menggunakan lynx.
 
-  ![14-06](https://user-images.githubusercontent.com/31863229/138662644-484252fc-8cc6-42c4-9977-8f52d1700ae4.PNG)
-- Buka `general.mecha.franky.B09.com:15500` menggunakan lynx.
+  ![14-05](https://user-images.githubusercontent.com/31863229/138662644-484252fc-8cc6-42c4-9977-8f52d1700ae4.PNG)
+- Buka `www.general.mecha.franky.B09.com:15500` menggunakan lynx.
 
-  ![14-07](https://user-images.githubusercontent.com/31863229/138662647-d8726d77-37e9-4059-b57b-5907dccd2f92.PNG)
+  ![14-06](https://user-images.githubusercontent.com/31863229/138662647-d8726d77-37e9-4059-b57b-5907dccd2f92.PNG)
 
 ## Soal 15
 Dengan authentikasi username `luffy` dan password `onepiece` dan file di `/var/www/general.mecha.franky.yyy`.
@@ -520,7 +519,6 @@ Dengan authentikasi username `luffy` dan password `onepiece` dan file di `/var/w
 - Edit file `general.mecha.franky.B09.com.conf` seperti pada gambar berikut:
 
   ![15-01](https://user-images.githubusercontent.com/31863229/138665511-c995a6bb-88c3-4d15-99de-91cc18c79e8b.PNG)
-  ![15-02](https://user-images.githubusercontent.com/31863229/138665524-77d3d34d-ca27-43af-913a-4646f5cd5020.PNG)
 - Jalankan perintah berikut untuk membuat akun autentikasi baru dengan username `luffy`. Kita akan diminta untuk memasukkan password baru dan confirm password tersebut diisi `onepiece`.
 
   ```
@@ -533,11 +531,11 @@ Dengan authentikasi username `luffy` dan password `onepiece` dan file di `/var/w
   ```
 
 **Pada Loguetown**
-- Buka `general.mecha.franky.B09.com:15000` menggunakan lynx.
+- Buka `www.general.mecha.franky.B09.com:15000` menggunakan lynx.
 
-  ![15-03](https://user-images.githubusercontent.com/31863229/138665528-85ea4f7c-2b62-4f83-9e70-bfc165c2df44.PNG)
-  ![15-04](https://user-images.githubusercontent.com/31863229/138665530-6ae720ac-15c8-472c-9f10-d55f3cb3f080.PNG)
-  ![15-05](https://user-images.githubusercontent.com/31863229/138665534-db4cce14-77ae-4d97-b297-14c06a19dbc7.PNG)
+  ![15-02](https://user-images.githubusercontent.com/31863229/138665528-85ea4f7c-2b62-4f83-9e70-bfc165c2df44.PNG)
+  ![15-03](https://user-images.githubusercontent.com/31863229/138665530-6ae720ac-15c8-472c-9f10-d55f3cb3f080.PNG)
+  ![15-04](https://user-images.githubusercontent.com/31863229/138665534-db4cce14-77ae-4d97-b297-14c06a19dbc7.PNG)
 
 ## Soal 16
 Dan setiap kali mengakses IP Skypie akan diahlikan secara otomatis ke `www.franky.yyy.com`.
@@ -580,19 +578,19 @@ Dikarenakan Franky juga ingin mengajak temannya untuk dapat menghubunginya melal
   ```
 
 **Pada Loguetown**
-- Buka `super.franky.B09.com/public/images/franky.png` menggunakan lynx.
+- Buka `www.super.franky.B09.com/public/images/franky.png` menggunakan lynx.
 
   ![17-03](https://user-images.githubusercontent.com/31863229/138675528-40995ec7-560a-4d9e-b2b9-b05ee3b3f64d.PNG)
-- Buka `super.franky.B09.com/public/images/eyeoffranky.jpg` menggunakan lynx.
+- Buka `www.super.franky.B09.com/public/images/eyeoffranky.jpg` menggunakan lynx.
 
   ![17-04](https://user-images.githubusercontent.com/31863229/138675531-b28c94e8-656f-46d4-a759-28ba179577a5.PNG)
-- Buka `super.franky.B09.com/public/images/background-frank.jpg` menggunakan lynx.
+- Buka `www.super.franky.B09.com/public/images/background-frank.jpg` menggunakan lynx.
 
   ![17-05](https://user-images.githubusercontent.com/31863229/138675533-1e50bd51-09ed-4d6c-9ec8-d15651521052.PNG)
 
 ## Kendala
-1. Kesulitan untuk memberikan alias pada subdomain pada soal 3 dan 7.
-2. Sedikit kesulitan pada pengerjaan soal Web Server karena aplikasi lynx tidak dapat menampilkan gambar pada soal 17.
+1. Sedikit kesulitan untuk memberikan alias pada subdomain pada soal 3 dan 7.
+2. Sedikit kesulitan pada soal 17 karena aplikasi lynx tidak dapat menampilkan gambar.
 
 ## Pembagian Tugas
 |Nama                   |Soal   |
