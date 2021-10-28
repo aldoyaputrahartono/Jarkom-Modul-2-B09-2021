@@ -343,10 +343,15 @@ Setelah itu, Luffy juga membutuhkan agar url `www.franky.yyy.com/index.php/home`
 
 ### Jawaban
 **Pada Skypie**
-- Pindah ke directory `/etc/apache2/sites-available`.
-- Edit file `franky.B09.com.conf` seperti pada gambar berikut:
+- Jalankan perintah `a2enmod rewrite` untuk mengaktifkan module rewrite.
+- Restart apache dengan perintah `service apache2 restart`.
+- Tambahkan file baru `.htaccess` pada folder `/var/www/franky.B09.com`, di mana file tersebut akan dimodifikasi menjadi:
 
-  ![09-01](https://user-images.githubusercontent.com/31863229/138647864-b9012e2d-8002-41cf-965d-b6b19d113b4a.PNG)
+  ![09-01](https://user-images.githubusercontent.com/31863229/139184365-dca56d87-94fd-4d93-9a8d-17f22f677e58.PNG)
+- Pindah ke directory `/etc/apache2/sites-available`.
+- Edit file `franky.B09.com.conf` agar file `.htaccess` dapat berjalan seperti pada gambar berikut:
+
+  ![09-02](https://user-images.githubusercontent.com/31863229/139184373-20cb1846-1707-4e0b-804e-2fe34e1b3d0f.PNG)
 - Restart apache.
 
   ```
@@ -356,7 +361,7 @@ Setelah itu, Luffy juga membutuhkan agar url `www.franky.yyy.com/index.php/home`
 **Pada Loguetown**
 - Buka `www.franky.B09.com/home` menggunakan lynx.
 
-  ![09-02](https://user-images.githubusercontent.com/31863229/138647857-59c7e0ac-4a6c-496d-93de-a0176037f41b.PNG)
+  ![09-03](https://user-images.githubusercontent.com/31863229/138647857-59c7e0ac-4a6c-496d-93de-a0176037f41b.PNG)
 
 ## Soal 10
 Setelah itu, pada subdomain `www.super.franky.yyy.com`, Luffy membutuhkan penyimpanan aset yang memiliki DocumentRoot pada `/var/www/super.franky.yyy.com`.
@@ -590,11 +595,12 @@ Dikarenakan Franky juga ingin mengajak temannya untuk dapat menghubunginya melal
 
 ## Kendala
 1. Sedikit kesulitan untuk memberikan alias pada subdomain pada soal 3 dan 7.
-2. Sedikit kesulitan pada soal 17 karena aplikasi lynx tidak dapat menampilkan gambar.
+2. Sedikit kesulitan pada soal 9 karena harus memakai Module Rewrite.
+3. Sedikit kesulitan pada soal 17 karena aplikasi lynx tidak dapat menampilkan gambar.
 
 ## Pembagian Tugas
-|Nama                   |Soal   |
-|:---------------------:|:-----:|
-|nama|soal|
-|nama|soal|
-|nama|soal|
+|Nama                   |Soal  |
+|:---------------------:|:----:|
+|Maximilian H M Lingga  |1 - 4 |
+|Izzulhaq Fawwaz Syauqiy|5 - 7 |
+|Aldo Yaputra Hartono   |8 - 17|
